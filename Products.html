@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Products</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/products.css">
+    <script src="js/Products.js"></script>
+  </head>
+
+  <body>
+    <header>
+        <nav class="navbar">
+          <ul class="navbar-items">
+            <li class="logo"><img src="images/Smartech.png" style="height: 30px;  " alt="logo"></img></li>
+            <li><a href="home.html">Home</a></li>
+            <li class="active"><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+              <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </nav>
+    </header>
+    
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Best Selling</h1>
+            <h6 class="lead text-muted">Our Best Selling items picked just for you.</h6>
+            <p>
+            </p>
+          </div>
+        </div>
+
+        <div class="album py-5 bg-light">
+          <div id="product" class="card-container">
+            <div class="row g-4">
+              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12" >
+                <div class="card shadow-sm h-100">
+                  <img src="images\im1.png" alt="applewatchseries6" onclick="openLightbox('images/im1.png')">
+                  <div class="card-body">
+                    <p class="card-title">Apple Watch Series 8</p>
+                    <p class="card-text">Measure your blood oxygen level with a amazing sensor and app. Take an ECG anytime, anywhere. Equipped with a fitness metrics at a glance with the display.</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openLightbox('images/im1.png')">View</button>
+                      <button onclick="addToCart(0)" type="button" class="add-to-cart btn btn-sm btn-outline-secondary">Add to Cart</button>      
+                    </div>
+                  </div>
+                  <p style="font-size: 24px; color: darkgoldenrod; margin-bottom: 0;">$399.99</p>
+                </div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12" >
+                <div class="card shadow-sm h-100">
+                  <img src="images\im2.png" alt="Lenovo IdeaPad" onclick="openLightbox('images/im2.png')">
+                  <div class="card-body">
+                    <p class="card-title">Lenovo IdeaPad</p>
+                    <p class="card-text">With a strong Processor and a sleek design you can do anything on this laptop, from watching movies to finishing excel sheets. The possiblilites are endless.</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openLightbox('images/im2.png')">View</button>
+                        <button onclick="addToCart(1)" type="button"   class=" add-to-cart btn btn-sm btn-outline-secondary">Add to Cart</button>
+                    </div>
+                  </div>
+                    <p style="font-size: 24px; color: darkgoldenrod; margin-bottom: 0;">$699.99</p>
+                </div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12" >
+                <div class="card shadow-sm h-100">
+                  <img src="images\im3.png" alt="Iphone14" onclick="openLightbox('images/im3.png')">
+                  <div class="card-body">
+                    <p class="card-title">Iphone 14</p>
+                    <p class="card-text">A lightning‑fast chip. A leap in battery life. And all‑new photo and video capabilities. iPhone 13 lets you do things you never could before — in two great sizes.</p>
+                  </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openLightbox('images/im3.png')">View</button>
+                        <button onclick="addToCart(2)" type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                      </div>
+                    </div>
+                    <p style="font-size: 24px; color: darkgoldenrod; margin-bottom: 0;">$699.99</p>
+                  </div>
+                </div>
+              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12" >
+                <div class="card shadow-sm h-100">
+                  <img src="images\im4.png" alt="ASUS ROG Strix G" onclick="openLightbox('images/im4.png')">
+                  <div class="card-body">
+                    <p class="card-title">ASUS ROG Strix G</p>
+                    <p class="card-text">The latest AMD Ryzen™ 9 6900HX CPU paired with up to a NVIDIA® 3080 Laptop GPU with 150W max TGP and MUX Switch form the backbone of the brand new 2022 Strix G.</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openLightbox('images/im4.png')">View</button>
+                        <button onclick="addToCart(3)" type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                      </div>
+                    </div>
+                    <p style="font-size: 24px; color: darkgoldenrod; margin-bottom: 0;">$1699.99</p>
+                  </div>
+                </div>
+              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12" >
+                <div class="card shadow-sm h-100">
+                  <img src="images\im5.png" alt="Echo Dot" onclick="openLightbox('images/im5.png')">
+                  <div class="card-body">
+                    <p class="card-title">Echo Dot</p>
+                    <p class="card-text">Meet the Echo Dot - Our most popular smart speaker with Alexa. The sleek, compact design delivers crisp vocals and balanced bass for full sound. With VC your entertainment.</p>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openLightbox('images/im5.png')">View</button>
+                        <button onclick="addToCart(4)" type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                      </div>
+                    </div>
+                    <p style="font-size: 24px; color: darkgoldenrod; margin-bottom: 0;">$59.99</p>
+                  </div>
+                </div>
+              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12" >
+                <div class="card shadow-sm h-100">
+                  <img src="images\im6.png" alt="JBL Quantum 800" onclick="openLightbox('images/im6.png')">
+                  <div class="card-body">
+                    <p class="card-title">JBL Quantum 800</p>
+                    <p class="card-text">Advanced Noise Cancellation Technology: Maintain your focus with Life Q30’s hybrid active noise cancellation. Dual noise-detecting microphones pick up and filter out .</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openLightbox('images/im6.png')">View</button>
+                      <button onclick="addToCart(5)" type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                    </div>
+                  </div>
+                  <p style="font-size: 24px; color: darkgoldenrod; margin-bottom: 0;">$99.99</p>
+                </div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12" >
+                <div class="card shadow-sm h-100">
+                  <img src="images\im7.png" alt="RTX 3070 TI" onclick="openLightbox('images/im7.png')">
+                  
+                  <div class="card-body">
+                    <p class="card-title">RTX 3070 TI</p>
+                    <p class="card-text">The GeForce RTXTM 3070 Ti and RTX 3070 graphics cards are powered by Ampere—NVIDIA’s 2nd gen RTX architecture. Built with enhanced Ray Tracing Cores and Tensor Cores.</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openLightbox('images/im7.png')">View</button>
+                      <button onclick="addToCart(6)" type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                    </div>
+                  </div>
+                  <p style="font-size: 24px; color: darkgoldenrod; margin-bottom: 0;">$569.99</p>
+                </div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12" >
+                <div class="card shadow-sm h-100">
+                  <img src="images\im8.png" alt="HAVIT KB393L" onclick="openLightbox('images/im8.png')">
+                  
+                  <div class="card-body">
+                    <p class="card-title">HAVIT KB393L</p>
+                    <p class="card-text">Backlit of KB393L Mechanical Gaming Keyboard and Mouse Combo is switchable among the pre-setting light effect modes. Support to customize and record 3 groups of backlit modes.</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openLightbox('images/im8.png')">View</button>
+                      <button onclick="addToCart(7)" type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                    </div>
+                  </div>
+                  <p style="font-size: 24px; color: darkgoldenrod; margin-bottom: 0;">$56.99</p>
+                </div>
+              </div>
+              <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12" >
+                <div class="card shadow-sm h-100">
+                  <img src="images\im9.png" alt="Intel Core i9" onclick="openLightbox('images/im9.png')">
+                  
+                  <div class="card-body">
+                    <p class="card-title">Intel Core i9</p>
+                    <p class="card-text">These processors power high-end PCs with excellent CPU performance for discrete-level graphics and AI acceleration.Advancing Performance Hybrid Architecture,Built for Modern Gaming.</p>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary" onclick="openLightbox('images/im9.png')">View</button>
+                      <button onclick="addToCart(8)" type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+                    </div>
+                  </div>
+                  <p style="font-size: 24px; color: darkgoldenrod; margin-bottom: 0;">$569.99</p>
+                </div>
+              </div>
+              <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                <span class="close-button" onclick="closeLightbox()">&times;</span>
+                <div class="lightbox-content">
+                  <img id="lightbox-image" class="lightbox-image" src="" alt="Enlarged Image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>

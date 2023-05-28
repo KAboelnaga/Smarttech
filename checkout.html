@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/checkout.css">
+    <title>Checkout</title>
+  </head>
+
+  <body class="bg-light min">
+    <div class="container">
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="images/cartlogo.png" alt="" width="72" height="72">
+            <h2>Checkout form</h2>
+            <p class="lead">Please fill out this form to complete the checkout process.</p>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted">Items in your cart  <i class="fas fa-shopping-cart"></i>
+                        <span id="cartItemsQuantity"></span>
+                    </span>
+                </h4>
+                <ul class="list-group justify-content-between sticky-top" id="ProductsContainer">                    
+                    <li class="list-group-item   lh-condensed" id="productsInCartContainer">
+                        <div class="container">
+                            <table>
+                              <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                              </tr>
+                              <tr>
+                                  <td id="product"></td>
+                                  <td id="quantity"></td>
+                                  <td id="price"></td>
+                              </tr>
+                            </table>
+                        </div>
+                        <span class="text-muted"></span>
+                    </li>
+                    
+                    <li class="list-group-item d-flex justify-content-between">
+                        <strong>Total Price: </strong>
+                        <strong id="totalCost"></strong>
+                    </li>
+                </ul>
+            </div>
+            <div">
+                <h4>Billing address</h4>
+                <form novalidate="" action="checkoutForm.php" onsubmit="return validateForm(event )">
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="firstName">First name <span class="text-muted">*</span></label>
+                            <input type="text" class="form-control" name="fName" id="firstName" placeholder="Bahaa" value="" required="">
+                            <div class="invalid-feedback" id="firstNameError"> Please enter a valid first name. </div>
+                        </div>
+                        <div class=" col-12">
+                            <label for="lastName">Last name <span class="text-muted">*</span></label>
+                            <input type="text" class="form-control" name="lName" id="lastName" placeholder="Eltawil" value="" required="">
+                            <div class="invalid-feedback" id="lastNameError"> Valid last name is required. </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="email">Email <span class="text-muted">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <input type="email" class="form-control" name="emailAddress" id="email" placeholder="you@example.com" required="">
+                            </div>
+                            <div class="invalid-feedback" id="emailError"> Please enter a valid email address. </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="address">Address <span class="text-muted">*</span></label>
+                            <input type="text" class="form-control"  id="address" placeholder="Kafr Abdo" required="">
+                            <div class="invalid-feedback" id="addressError"> Please enter your shipping address.</div>
+                        </div>
+                     </div>
+                     <div class="col-12">
+                        <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+                        <input type="text" class="form-control" id="address2" placeholder="Apartment">
+                     </div>
+                     <div class="row">
+                        <div class="col-12">
+                            <label for="country" class="form-label">Country</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-globe-africa"></i></span>
+                                <input type="text" name="" id="country" class="form-control" value="Egypt" readonly>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="city" class="form-label">City <span class="text-muted">*</span></label>
+                            <select name="" id="city" class="form-control" required>
+                                <option value="">Select your city</option>
+                                <option value="Cairo">Cairo</option>
+                                <option value="Giza">Giza</option>
+                                <option value="Alexandria">Alexandria</option>
+                                <option value="Luxor">Luxor</option>
+                                <option value="Aswan">Aswan</option>
+                                <option value="Tanta">Tanta</option>
+                                <option value="Port Said">Port Said</option>
+                                <option value="Asyut">Asyut</option>
+                                <option value="Suez">Suez</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a city.
+                            </div>
+                        </div> 
+                     </div>
+                    <hr class="mb-4">
+                    <h4 class="mb-3">Payment</h4>
+                    <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" required="" onclick="checkPressed();">
+                            <label class="custom-control-label" for="credit">Credit card</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="cash" name="paymentMethod" type="radio" class="custom-control-input" required="" onclick="checkPressed();">
+                            <label class="custom-control-label" for="cash">Cash</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="cc-name" id="creditCardLabel" style="display: none;">Name on card</label>
+                            <input type="text" class="form-control" id="cc-name" placeholder="" required="" style="display: none;">
+                            <small class="text-muted" id="cc-muted" style="display: none;">Full name as displayed on card</small>
+                            <div class="invalid-feedback" id="nameOnCardError" style="display: none;"> Name on card is required </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="cc-number" id="cardNumberLabel" style="display: none;">Credit card number</label>
+                            <input type="text" class="form-control" id="cc-number" placeholder="" required="" style="display: none;">
+                            <div class="invalid-feedback" id="creditCardNumberError" style="display: none;"> Credit card number is required </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <label for="cc-expiration" id="cardExpLabel" style="display: none;">Expiration</label>
+                            <input type="text" class="form-control" id="cc-expiration" placeholder="MM/YY" required="" style="display: none;">
+                            <div class="invalid-feedback" id="expirationDateError" style="display: none;"> Expiration date required </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="cc-cvv" id="cvvLabel" style="display: none;">CVV</label>
+                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required="" style="display: none;">
+                            <div class="invalid-feedback" id="cvvError" style="display: none;"> Security code required </div>
+                        </div>
+                    </div>
+                    <hr class="mb-4">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Checkout</button>
+                </form>
+            </div>
+        </div>
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">©2023 Web Project</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Javascript/checkoutForm.js"></script>
+    <script src="js/checkout.js"></script>
+  </body>
+</html>

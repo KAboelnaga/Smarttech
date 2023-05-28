@@ -1,0 +1,103 @@
+header {
+      background-color: #333;   
+      padding: 10px;
+    }
+    
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .navbar-items{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    .navbar-items li{
+      margin-right: 30px;
+    }
+  
+    
+    .navbar-items li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.4s ease;
+    }
+    
+    .navbar-items li a:hover {
+      color: #ff7f50;
+    }
+    .navbar-items li.active a {
+      color: #ff7f50; 
+    }
+    .login-signup a {
+      color: #fff;
+    }
+    
+    .cart-logo {
+      height: 30px;
+      width: auto;
+    }
+    .carousel {
+      background-color: rgb(73, 76, 80); 
+      height: 400px; 
+      overflow: hidden; 
+    }
+
+    .carousel-inner {
+      height: 100%; 
+    }
+
+    .carousel-item {
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      height: 100%; 
+    }
+
+    .carousel-item img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .carousel-item h4{
+      color: rgb(255, 255, 255);
+      font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .card-container{
+margin-bottom: 20px;
+display: flex;
+flex-direction: column;
+padding: 50px;
+
+}
+
+.card-body {
+flex-grow: 1;
+}
+
+.card img{
+height: 200px;
+object-fit: contain;
+object-position: center;
+transition: transform 0.3s ease;
+}
+.card:hover .card img {
+      transform: scale(1.2);
+    }
+
+.card-title {
+font-size: 20px;
+height: 40px;
+font-weight: bold;
+margin-bottom: 10px;
+
+
+}
+
+.card-text {
+margin-bottom: 10px;
+padding-top: 10px;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+    <style>
+        body {
+			margin: 0;
+			padding: 200px;
+			font-family: 'Montserrat', sans-serif;
+			background: #302f37;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100px;
+		}
+		
+		.container {
+			width: 350px;
+			min-width: 300px;
+			padding: 30px 25px;
+			border-radius: 5px;
+			background: white;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		}
+		
+		h1 {
+			margin: 0 0 20px;
+			padding: 0;
+			font-size: 28px;
+			color: #302f37;
+			text-align: center;
+		}
+		
+		label {
+			display: block;
+			margin-bottom: 8px;
+			font-size: 14px;
+			color: #1F1D2B;
+			text-transform: uppercase;
+			font-weight: 500;
+		}
+		
+		input[type="text"],
+		input[type="email"],
+		input[type="password"] {
+			width: 90%;
+			padding: 10px;
+			border: none;
+			border-radius: 3px;
+			background: #F3F3F3;
+			font-size: 16px;
+			color: #1F1D2B;
+			margin-bottom: 20px;
+		}
+		
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		input[type="password"]:focus {
+			outline: none;
+			border: none;
+			background: #EBEBEB;
+		}
+		
+		input[type="submit"] {
+			width: 100%;
+			padding: 10px 15px;
+			border: none;
+			border-radius: 3px;
+			background: #1F1D2B;
+			color: #fff;
+			font-size: 16px;
+			font-weight: 600;
+			cursor: pointer;
+			transition: background .3s ease-in-out;
+		}
+		
+		input[type="submit"]:hover {
+			background: #444;
+		}
+		
+		.form-message {
+			color: #FF4136;
+			font-size: 14px;
+			margin-top: 10px;
+			display: none;
+		}
+		
+		.form-message.active {
+			display: block;
+		}
+		
+		.form-message.success {
+			color: #2ECC40;
+		}
+		
+		.form-message.error {
+			color: #FF4136;
+		}
+    </style>
+	
+    <script>
+        function validateForm() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // Regular expression patterns
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            // Compare the input values with the regular expression patterns
+            if (!email.match(emailRegex)) {
+                var messageElement = document.getElementById('message');
+                messageElement.style.display = 'block';
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form onsubmit="return validateForm()">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <input type="submit" value="Login">
+
+            <p id="message" class="message" style="display: none; text-align: center; color: #FF4136""><b>Invalid email.</b></p>
+        </form>
+    </div>
+</body>
+</html>

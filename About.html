@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/about.css">
+    <script src="js/About.js"></script>
+</head>
+<body>
+  <header>
+      <nav class="navbar">
+        <ul class="navbar-items">
+          <li class="logo"><img src="images/Smartech.png" style="height: 30px;  " alt="logo"></img></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li class="active"><a href="about.html">About</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+  </header>
+  <div class="about-section">
+    <p style="text-align:center">Some text about who we are and what we do.</p>
+  </div>
+  <h2 style="text-align:center">Our Team</h2>
+  <div class="album py-5 bg-light">
+    <div class="card-container">
+      <div class="row g-4">
+        <div class="col-12 col-lg-6" >
+          <div class="card">
+            <div class="circle-container" onclick="openLightbox('images/kareem.jpg')">
+              <img src="images/kareem.jpg" alt="Kareem Aboelnaga">
+            </div>
+            <div class="card-body">
+              <h2 class="card-title">Kareem Aboelnaga</h2>
+              <p class="card-text">Cofounder<br>19101202<br>kareemaboelnaga18@gmail.com</p>
+              <button type="button" class="btn btn-sm btn-outline-secondary" onclick="sendEmail1()">Contact</button></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6" >
+          <div class="card">
+            <div class="circle-container" onclick="openLightbox('images/abdelrahman.jpg')">
+              <img src="images/abdelrahman.jpg" alt="Abdelrahman Amr" >
+            </div>
+            <div id="lightbox" class="lightbox" onclick="closeLightbox()" >
+              <span class="close-button" onclick="closeLightbox()">&times;</span>
+              <div class="lightbox-content">
+                <img id="lightbox-image" class="lightbox-image" src="" alt="Enlarged Image">
+              </div>
+            </div>
+            <div class="card-body">
+              <h2 class="card-title">Abdelrahman Amr</h2>
+              <p class="card-text">Cofounder<br>19101159<br>abdelrhman.mano.aae@gmail.com</p>
+              <button type="button" class="btn btn-sm btn-outline-secondary" onclick="sendEmail2()">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

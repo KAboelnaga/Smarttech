@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/cart.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul class="navbar-items">
+          <li class="logo"><img src="images/Smartech.png" style="height: 30px;  " alt="logo"></img></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="active"><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h3 id="empty"></h3>
+    <table id="cartTable">
+      <tr>
+        <th style="width: 200px;" id="imageContainer"></th>
+        <th id="product"></th>
+        <th id="quantity"></th>
+        <th id="price"></th>
+        <th id="checkout"></th>
+      </tr>
+    </table>
+    <a href="checkout.html">
+      <button class="hidden checkout-button" id="checkoutButton">Checkout</button>
+    </a>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

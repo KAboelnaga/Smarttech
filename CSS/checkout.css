@@ -1,0 +1,38 @@
+.container {
+    width: 500px;
+}
+
+table {
+    min-width: 400px;
+ 
+}
+
+th,
+td {
+  padding: 8px;
+}
+
+th:first-child,
+td:first-child {
+  align-self: flex-start;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  align-self: center;
+}
+
+th:last-child,
+td:last-child {
+  align-self: flex-end;
+}
+
+.form-control.is-valid {
+      background-color: #e7f7ee;
+      border-color: #3ac162;
+    }
+
+    .form-control.is-invalid {
+      background-color: #fdf0f0;
+      border-color: #e92c2c;
+    }
